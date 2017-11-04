@@ -1,0 +1,26 @@
+/* The username is 'root' and password is '1234'. The databse name is 'project' */
+
+
+
+
+mysql> create table books(book_name varchar(50),issued_by int,issue_date date, primary key(book_name));
+mysql> create table users(userid int, username varchar(50), subscription_date date, password varchar(40) not null, primary key(userid));
+
+mysql> desc books;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| book_name  | varchar(50) | NO   | PRI | NULL    |       |
+| issued_by  | int(11)     | YES  |     | NULL    |       |
+| issue_date | date        | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+
+mysql> desc users;
++-------------------+-------------+------+-----+---------+-------+
+| Field             | Type        | Null | Key | Default | Extra |
++-------------------+-------------+------+-----+---------+-------+
+| userid            | int(11)     | NO   | PRI | NULL    |       |
+| username          | varchar(50) | YES  |     | NULL    |       |
+| subscription_date | date        | YES  |     | NULL    |       |
+| password          | varchar(40) | NO   |     | NULL    |       |
++-------------------+-------------+------+-----+---------+-------+
