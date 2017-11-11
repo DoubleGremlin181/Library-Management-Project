@@ -136,7 +136,7 @@ public class Issue extends javax.swing.JFrame {
                 }
                 else
                 {
-                 String query3="UPDATE BOOKS SET ISSUED_BY= '"+Login.UserID+"' WHERE BOOK_NAME='"+jTextField1.getText()+"';";
+                 String query3="UPDATE BOOKS SET ISSUED_BY= '"+Login.UserID+"', ISSUE_DATE = CURDATE() WHERE BOOK_NAME='"+jTextField1.getText()+"';";
                  Statement stmt3 = dbCon.prepareStatement(query3);
                  stmt1.executeUpdate(query3);
                  JOptionPane.showMessageDialog(this,"Book Issued");
